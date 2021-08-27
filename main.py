@@ -11,11 +11,13 @@ for letter in chosen_word:
   display.append('_')
 
 print(display) 
-guess = input('Guess a letter!').lower()
+while '_' in display:
+  guess = input('Guess a letter!').lower()
 
-for index in range(len(chosen_word)):
-  if chosen_word[index] == guess:
-    display[index]=guess
-     
- 
-print(display)
+  for index in range(len(chosen_word)):
+    if chosen_word[index] == guess:
+      display[index]=guess
+
+  print(display)
+
+print('You win!')
